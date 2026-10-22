@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover inspiration with SnapNest.">
+  <title>SnapNest — Find Your Inspiration</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#" aria-label="SnapNest home">
+      <span class="logo-icon">S</span> SnapNest
+    </a>
+    <span class="nav-note">A little inspiration goes a long way.</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR NEXT IDEA STARTS HERE</p>
+      <h1>Find images that<br><span>move you.</span></h1>
+      <p class="subtitle">
+        Explore your interests and discover inspiration for your next big idea.
+      </p>
+
+      <form class="search-form" id="searchForm" role="search">
+        <label class="sr-only" for="searchInput">Search for images</label>
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search"
+          placeholder="Try nature, architecture, coffee..."
+          autocomplete="off">
+        <button type="submit" id="searchButton">Search ↗</button>
+      </form>
+
+      <div class="quick-search">
+        <span>TRY:</span>
+        <button type="button" class="chip" data-query="Nature">Nature</button>
+        <button type="button" class="chip" data-query="Architecture">Architecture</button>
+        <button type="button" class="chip" data-query="Travel">Travel</button>
+        <button type="button" class="chip" data-query="Food">Food</button>
+      </div>
+    </section>
+
+    <section class="gallery" aria-labelledby="galleryTitle">
+      <div class="gallery-heading">
+        <div>
+          <p class="eyebrow">YOUR VISUAL PLAYGROUND</p>
+          <h2 id="galleryTitle">Explore the possibilities</h2>
+        </div>
+        <button type="button" id="clearButton" class="clear-button">Clear search</button>
+      </div>
+
+      <p id="searchStatus" class="search-status" aria-live="polite">
+        Your discoveries will appear here.
+      </p>
+
+      <div id="results" class="results" aria-label="Image search results">
+        <!-- Image cards will be added in a future part. -->
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon" aria-hidden="true">✳</div>
+        <h3>A world of inspiration awaits</h3>
+        <p>Type something above or choose a topic to start exploring.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo footer-logo" href="#">SnapNest.</a>
+    <p>Made for the curious. Built for inspiration.</p>
+  </footer>
+</body>
+</html>
