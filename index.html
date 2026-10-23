@@ -3,73 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover inspiration with SnapNest.">
-  <title>SnapNest — Find Your Inspiration</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="SnapNest — discover images from around the world.">
+  <title>SnapNest | Image Search</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="navbar">
-    <a class="logo" href="#" aria-label="SnapNest home">
-      <span class="logo-icon">S</span> SnapNest
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="SnapNest home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>SnapNest</span>
     </a>
-    <span class="nav-note">A little inspiration goes a long way.</span>
+    <span class="header-note">A little inspiration, one search away</span>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">YOUR NEXT IDEA STARTS HERE</p>
-      <h1>Find images that<br><span>move you.</span></h1>
-      <p class="subtitle">
-        Explore your interests and discover inspiration for your next big idea.
-      </p>
+      <p class="eyebrow">EXPLORE THE VISUAL WORLD</p>
+      <h1>Find your next<br><span>inspiration.</span></h1>
+      <p class="hero-copy">Search photographs, places, nature, art, and everything in between.</p>
 
-      <form class="search-form" id="searchForm" role="search">
-        <label class="sr-only" for="searchInput">Search for images</label>
-        <span aria-hidden="true">⌕</span>
-        <input id="searchInput" type="search"
-          placeholder="Try nature, architecture, coffee..."
-          autocomplete="off">
-        <button type="submit" id="searchButton">Search ↗</button>
+      <form id="search-form" class="search-form">
+        <label class="visually-hidden" for="search-input">Search for images</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search-input" name="q" type="search" placeholder="Try “mountains”, “cats”, or “space”" autocomplete="off" required>
+        <button id="search-button" type="submit">Search <span aria-hidden="true">↗</span></button>
       </form>
 
-      <div class="quick-search">
-        <span>TRY:</span>
-        <button type="button" class="chip" data-query="Nature">Nature</button>
-        <button type="button" class="chip" data-query="Architecture">Architecture</button>
-        <button type="button" class="chip" data-query="Travel">Travel</button>
-        <button type="button" class="chip" data-query="Food">Food</button>
+      <div class="suggestions" aria-label="Popular searches">
+        <span>Try:</span>
+        <button type="button" class="suggestion" data-query="mountains">Mountains</button>
+        <button type="button" class="suggestion" data-query="flowers">Flowers</button>
+        <button type="button" class="suggestion" data-query="architecture">Architecture</button>
+        <button type="button" class="suggestion" data-query="cats">Cats</button>
       </div>
     </section>
 
-    <section class="gallery" aria-labelledby="galleryTitle">
-      <div class="gallery-heading">
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="results-heading-row">
         <div>
-          <p class="eyebrow">YOUR VISUAL PLAYGROUND</p>
-          <h2 id="galleryTitle">Explore the possibilities</h2>
+          <p class="eyebrow">YOUR DISCOVERY BOARD</p>
+          <h2 id="results-heading">Ready when you are</h2>
         </div>
-        <button type="button" id="clearButton" class="clear-button">Clear search</button>
+        <p id="result-count" class="result-count"></p>
       </div>
 
-      <p id="searchStatus" class="search-status" aria-live="polite">
-        Your discoveries will appear here.
-      </p>
-
-      <div id="results" class="results" aria-label="Image search results">
-        <!-- Image cards will be added in a future part. -->
+      <div id="status" class="status idle" role="status" aria-live="polite">
+        <span class="status-symbol" aria-hidden="true">✧</span>
+        <span>Type something above to start exploring.</span>
       </div>
 
-      <div class="empty-state" id="emptyState">
-        <div class="empty-icon" aria-hidden="true">✳</div>
-        <h3>A world of inspiration awaits</h3>
-        <p>Type something above or choose a topic to start exploring.</p>
-      </div>
+      <div id="results" class="results-grid" aria-label="Image search results"></div>
     </section>
   </main>
 
   <footer>
-    <a class="logo footer-logo" href="#">SnapNest.</a>
-    <p>Made for the curious. Built for inspiration.</p>
+    <span>Made for curious minds ✦</span>
+    <span>Images provided by Wikimedia Commons</span>
   </footer>
 </body>
 </html>

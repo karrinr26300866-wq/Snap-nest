@@ -1,27 +1,26 @@
-# SnapNest
+# SnapNest — Image Search
 
-SnapNest is a responsive image-search website UI built with HTML, CSS, and JavaScript.
+SnapNest is a responsive image-search website built with plain HTML, CSS, and JavaScript. It searches Wikimedia Commons, which does not require an API key.
 
-## Features
+## Files
+- `index.html` — page structure
+- `style.css` — layout and responsive styling
+- `script.js` — API search, loading state, empty state, error handling, and result rendering
 
-- Search input and search button
-- Quick-search topic chips
-- Responsive CSS Grid for future image results
-- Empty state for the initial page
-- Clear-search control
-- Responsive layout for desktop and mobile
-- No framework required
+## Run it
+Open `index.html` in a browser with an internet connection. If your browser restricts requests from local files, publish the files with GitHub Pages and test the live URL.
 
-## Project files
+## Publish with GitHub Pages
+1. Upload these files to your GitHub repository.
+2. Open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Choose the `main` branch and `/ (root)` folder, then save.
+5. Wait for the Pages URL to appear and open it to test.
 
-- `index.html` — webpage structure
-- `styles.css` — styling and responsive layout
-- `script.js` — basic search interface interactions
+## Test checklist
+- Search a normal term such as `cats` — images should appear.
+- Search a nonsense term such as `zxqwlk` — a no-results message should appear.
+- Test while offline or with a failed API request — a friendly error message should appear.
+- Check the layout on a phone-sized screen.
 
-## How to run
-
-Open `index.html` in a web browser.
-
-## Current scope
-
-Part 1 builds the user interface. Fetching real images from an image API will be implemented in a later part.
+Images and search data are supplied by Wikimedia Commons.
